@@ -1,0 +1,116 @@
+apply plugin: 'com.android.application'
+apply plugin: 'kotlin-android'
+apply plugin: 'kotlin-kapt'
+apply plugin: 'androidx.navigation.safeargs'
+apply plugin: 'kotlin-android-extensions'
+
+android {
+    compileSdkVersion versions.android.compileSdk
+
+    defaultConfig {
+        applicationId "e.ustoz.app.presentation"
+        minSdkVersion versions.android.minSdk
+        targetSdkVersion versions.android.targetSdk
+        versionCode 6
+        versionName "1.5 beta"
+
+        testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
+
+        javaCompileOptions {
+            annotationProcessorOptions {
+                arguments = [
+                        disableEmptyStrategyCheck: 'true',
+                        enableEmptyStrategyHelper: 'true',
+                        defaultMoxyStrategy      : 'moxy.viewstate.strategy.AddToEndSingleStrategy'
+                ]
+            }
+        }
+    }
+
+    buildTypes {
+        debug { applicationVariants.all { variant -> renameBuildApk(variant) } }
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+            applicationVariants.all { variant -> renameBuildApk(variant) }
+        }
+    }
+
+    compileOptions {
+        sourceCompatibility = 1.8
+        targetCompatibility = 1.8
+    }
+
+    kotlinOptions { jvmTarget = "1.8" }
+
+    viewBinding { enabled = true }
+}
+
+def renameBuildApk(variant) {
+    variant.outputs.all { output ->
+        def versionName = variant.versionName
+        def variantName = variant.name
+        outputFileName = 'ustoz-uz-' + variantName + '-v' + versionName + '.apk'
+    }
+}
+
+dependencies {
+    implementation fileTree(dir: 'libs', include: ['*.jar'])
+
+    implementation "org.jetbrains.kotlin:kotlin-stdlib-jdk8:$versions.kotlin.stdlib"
+    implementation "org.jetbrains.kotlinx:kotlinx-serialization-runtime:$versions.kotlin.serializer"
+
+    implementation project(":data")
+    implementation project(":domain")
+
+    implementation "androidx.appcompat:appcompat:$versions.androidx.appcompat"
+    implementation "androidx.constraintlayout:constraintlayout:$versions.androidx.constraintlayout"
+    implementation "androidx.core:core-ktx:$versions.androidx.core_ktx"
+    implementation "androidx.lifecycle:lifecycle-extensions:$versions.androidx.lifecycle_extensions"
+    implementation "androidx.lifecycle:lifecycle-livedata-ktx:$versions.androidx.lifecycle_livedata_ktx"
+    implementation "androidx.navigation:navigation-fragment-ktx:$versions.androidx.navigation_fragment_ktx"
+    implementation "androidx.navigation:navigation-ui-ktx:$versions.androidx.navigation_ui_ktx"
+    implementation "androidx.work:work-runtime-ktx:$versions.androidx.work"
+
+    implementation "com.brandongogetap:stickyheaders:$versions.brandongogetap.stickyheaders"
+
+    implementation "com.google.android.material:material:$versions.google.android_material"
+
+    implementation 'com.google.firebase:firebase-analytics:17.2.2'
+
+    implementation "com.google.dagger:dagger:$versions.google.dagger"
+    implementation 'com.google.android.gms:play-services-maps:17.0.0'
+    kapt "com.google.dagger:dagger-compiler:$versions.google.dagger"
+
+    implementation "com.google.zxing:core:3.4.0"
+    implementation "com.google.zxing:android-core:3.3.0"
+
+    implementation "com.github.moxy-community:moxy:$versions.moxy_community.moxy"
+    implementation "com.github.moxy-community:moxy-androidx:$versions.moxy_community.moxy"
+    implementation "com.github.moxy-community:moxy-ktx:$versions.moxy_community.moxy"
+    implementation "com.github.moxy-community:moxy-material:$versions.moxy_community.moxy"
+    kapt "com.github.moxy-community:moxy-compiler:$versions.moxy_community.moxy"
+
+    implementation "com.archit.calendar:awesome-calendar:$versions.archit.awesome_calendar"
+
+    implementation "com.chaos.view:pinview:$versions.chaos.pinview"
+
+    implementation "com.github.valeryponomarenko.componentsmanager:androidx:$versions.valeryponomarenko.componentsmanager"
+
+    implementation "ru.tinkoff.decoro:decoro:$versions.tinkoff.decoro"
+
+    // image loaders
+    implementation 'com.facebook.fresco:fresco:2.0.0'
+
+    /*slide nav menu*/
+    implementation 'nl.psdcompany:duo-navigation-drawer:3.0.0'
+
+    // page indicator
+    implementation 'me.relex:circleindicator:2.1.4@aar'
+
+    androidTestImplementation "androidx.test.ext:junit:$versions.androidx.testExtJunit"
+    androidTestImplementation "androidx.test.espresso:espresso-core:$versions.androidx.testEspresso"
+    androidTestImplementation "androidx.test:runner:$versions.androidx.testRunner"
+    testImplementation "junit:junit:$versions.junit.junit"
+
+}
