@@ -63,6 +63,8 @@ ext.versions = [
 
         junit            : [junit: '4.12'],
 
+        intuit           : [sdp: '1.0.6'],
+
         square           : [
                 leakcanary             : '1.6.2',
                 okhttp                 : '3.9.1',
@@ -73,5 +75,9 @@ ext.versions = [
 
         tinkoff          : [decoro: '1.3.1'],
 
-        valeryponomarenko: [componentsmanager: '2.1.0']
+        valeryponomarenko: [componentsmanager: '2.1.0'],
+        zhanghai         : [
+                materialprogressbar: '1.6.1',
+                systemuihelper     : '1.0.0'
+        ]
 ]

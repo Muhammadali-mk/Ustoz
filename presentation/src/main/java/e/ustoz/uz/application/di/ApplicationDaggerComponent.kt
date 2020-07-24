@@ -5,12 +5,12 @@ import dagger.BindsInstance
 import dagger.Component
 import e.ustoz.data.manager.coroutine.CoroutineContextManager
 import e.ustoz.data.provider.repository.DataRepositoryProvider
+import e.ustoz.uz.application.work.di.WorkerProvidersDaggerModule
 import kotlinx.coroutines.channels.BroadcastChannel
 import uz.anotomica.app.data.manager.coroutine.CoroutineContextManager
 import uz.anotomica.app.data.provider.repository.DataRepositoryProvider
 import uz.anotomica.app.presentation.application.Application
 import uz.anotomica.app.presentation.application.di.ApplicationDaggerModule
-import uz.anotomica.app.presentation.application.work.di.WorkerProvidersDaggerModule
 import javax.inject.Singleton
 
 @Singleton

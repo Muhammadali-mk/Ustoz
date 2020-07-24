@@ -73,6 +73,7 @@ dependencies {
     implementation "androidx.work:work-runtime-ktx:$versions.androidx.work"
 
     implementation "com.brandongogetap:stickyheaders:$versions.brandongogetap.stickyheaders"
+    api "com.intuit.sdp:sdp-android:$versions.intuit.sdp"
 
     implementation "com.google.android.material:material:$versions.google.android_material"
 
@@ -107,6 +108,9 @@ dependencies {
 
     // page indicator
     implementation 'me.relex:circleindicator:2.1.4@aar'
+
+    api "me.zhanghai.android.materialprogressbar:library:$versions.zhanghai.materialprogressbar"
+
 
     androidTestImplementation "androidx.test.ext:junit:$versions.androidx.testExtJunit"
     androidTestImplementation "androidx.test.espresso:espresso-core:$versions.androidx.testEspresso"

@@ -1,0 +1,26 @@
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item
+        android:id="@+id/navigation_home_author_info"
+        android:orderInCategory="100"
+        android:icon="@drawable/vector_drawable_author_info"
+        android:title="@string/title_author_info" />
+    <item
+        android:id="@+id/navigation_home_folder"
+        android:orderInCategory="103"
+        android:actionLayout="@layout/menu_divider_linear_layout"
+        android:icon="@drawable/vector_drawable_folder"
+        android:title="@string/title_folder"
+        />
+    <item
+        android:id="@+id/navigation_home_tests"
+        android:orderInCategory="104"
+        android:icon="@drawable/vector_drawable_tests"
+        android:title="@string/title_tests"
+        />
+    <item
+        android:id="@+id/navigation_home_profile_fragment"
+        android:icon="@drawable/vector_drawable_daybook"
+        android:orderInCategory="104"
+        android:title="@string/title_daybook"
+        />
+</menu>

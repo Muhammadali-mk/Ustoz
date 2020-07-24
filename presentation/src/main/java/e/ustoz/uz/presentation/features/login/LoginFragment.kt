@@ -25,4 +25,13 @@ class LoginFragment @Inject constructor(
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
     }
+
+    override fun onLoadingLogin() {
+    }
+
+    override fun onSuccessLogin() {
+    }
+
+    override fun onFailureLogin(throwable: Throwable) {
+    }
 }

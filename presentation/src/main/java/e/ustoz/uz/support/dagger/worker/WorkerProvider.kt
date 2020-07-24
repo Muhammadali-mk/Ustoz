@@ -1,4 +1,4 @@
-package uz.anotomica.app.presentation.support.dagger.worker
+package e.ustoz.uz.support.dagger.worker
 
 import android.content.Context
 import androidx.work.ListenableWorker

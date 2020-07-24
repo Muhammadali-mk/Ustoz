@@ -2,7 +2,7 @@ package uz.anotomica.app.presentation.application.work
 
 import android.content.Context
 import androidx.work.*
-import uz.anotomica.app.presentation.application.work.worker.SyncWorker
+import e.ustoz.uz.application.work.worker.SyncWorker
 import java.util.concurrent.TimeUnit
 
 class WorkManagerDelegate {

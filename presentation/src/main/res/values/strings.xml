@@ -1,3 +1,11 @@
 <resources>
     <string name="app_name">Ustoz</string>
+    <string name="title_author_info">Author Info</string>
+    <string name="title_folder">Folders</string>
+    <string name="title_tests">Tests</string>
+    <string name="title_daybook">Daybook</string>
+    <string name="core_presentation_common_error">Error</string>
+    <string name="core_presentation_common_error_connection_message">There was an error in connecting to server. Please, try again.</string>
+    <string name="core_presentation_common_error_unknown_message">There was an unknown error. Please, try again later.</string>
+
 </resources>

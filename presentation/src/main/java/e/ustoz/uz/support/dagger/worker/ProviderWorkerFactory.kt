@@ -4,6 +4,7 @@ import android.content.Context
 import androidx.work.ListenableWorker
 import androidx.work.WorkerFactory
 import androidx.work.WorkerParameters
+import e.ustoz.uz.support.dagger.worker.WorkerProvider
 import javax.inject.Inject
 import javax.inject.Provider
 

@@ -1,17 +1,19 @@
-package uz.anotomica.app.presentation.application.work.worker
+package e.ustoz.uz.application.work.worker
 
 import android.content.Context
 import androidx.work.CoroutineWorker
 import androidx.work.ListenableWorker
 import androidx.work.WorkerParameters
 import com.google.common.util.concurrent.ListenableFuture
+import e.ustoz.data.manager.coroutine.CoroutineContextManager
+import e.ustoz.domain.interactor.sync.SyncInteractor
 import e.ustoz.uz.support.dagger.worker.WorkerProvider
 import kotlinx.coroutines.CoroutineScope
 import kotlinx.coroutines.Job
 import kotlinx.coroutines.cancel
+import kotlinx.coroutines.flow.first
+import kotlinx.coroutines.flow.map
 import kotlinx.coroutines.withContext
-import uz.anotomica.app.data.manager.coroutine.CoroutineContextManager
-import uz.anotomica.app.domain.interactor.sync.SyncInteractor
 import javax.inject.Inject
 
 class SyncWorker(

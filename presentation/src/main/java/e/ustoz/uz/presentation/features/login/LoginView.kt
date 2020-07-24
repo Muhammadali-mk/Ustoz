@@ -4,13 +4,10 @@ import moxy.MvpView
 
 interface AuthenticateView : MvpView {
 
-//    fun onLoadingLogin()
-//
-//    fun onSuccessLogin()
-//
-//    fun onFailureLogin(throwable: Throwable)
-//
-//    fun onFailurePhoneValidationError()
-//
-//    fun onFailurePasswordValidationError()
+    fun onLoadingLogin()
+
+    fun onSuccessLogin()
+
+    fun onFailureLogin(throwable: Throwable)
+
 }
