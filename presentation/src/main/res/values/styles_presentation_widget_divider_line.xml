@@ -1,0 +1,7 @@
+<resources>
+
+    <style name="Presentation.Widget.Divider.Line">
+        <item name="android:background">#6B7E7E7E</item>
+        <item name="android:layout_height">1px</item>
+    </style>
+</resources>

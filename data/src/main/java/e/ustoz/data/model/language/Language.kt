@@ -1,4 +1,4 @@
-package uz.anotomica.app.data.model.language
+package e.ustoz.data.model.language
 
 import java.util.*
 

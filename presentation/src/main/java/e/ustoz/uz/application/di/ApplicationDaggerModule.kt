@@ -1,4 +1,4 @@
-package uz.anotomica.app.presentation.application.di
+package e.ustoz.uz.application.di
 
 
 import android.content.Context
@@ -9,12 +9,13 @@ import e.ustoz.data.provider.DataProvider
 import e.ustoz.data.provider.manager.DataManagerProvider
 import e.ustoz.data.provider.repository.DataRepositoryProvider
 import e.ustoz.data.provider.repository.datasource.DataPreferenceSourceProvider
+import e.ustoz.data.repository.state.StateRepository
+import e.ustoz.uz.application.di.ApplicationDaggerModule.Provider
+import e.ustoz.uz.application.di.ApplicationDaggerModule.ProviderPreferenceSource
+import e.ustoz.uz.application.di.ApplicationDaggerModule.ProviderRepository
 import kotlinx.coroutines.ExperimentalCoroutinesApi
 import kotlinx.coroutines.channels.BroadcastChannel
 import kotlinx.coroutines.channels.Channel
-import uz.anotomica.app.presentation.application.di.ApplicationDaggerModule.Provider
-import uz.anotomica.app.presentation.application.di.ApplicationDaggerModule.ProviderPreferenceSource
-import uz.anotomica.app.presentation.application.di.ApplicationDaggerModule.ProviderRepository
 import javax.inject.Singleton
 
 @Module(includes = [Provider::class, ProviderPreferenceSource::class, ProviderRepository::class])
@@ -80,6 +81,11 @@ object ApplicationDaggerModule {
     @Module
     object ProviderRepository {
 
-
+        @JvmStatic
+        @Provides
+        @Singleton
+        fun provideStateRepository(
+            dataRepositoryProvider: DataRepositoryProvider
+        ): StateRepository = dataRepositoryProvider.stateRepository
     }
 }

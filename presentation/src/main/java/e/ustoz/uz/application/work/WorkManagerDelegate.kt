@@ -1,4 +1,4 @@
-package uz.anotomica.app.presentation.application.work
+package e.ustoz.uz.application.work
 
 import android.content.Context
 import androidx.work.*

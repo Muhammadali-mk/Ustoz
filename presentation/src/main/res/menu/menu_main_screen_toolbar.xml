@@ -11,7 +11,7 @@
         app:showAsAction="always" />
 
     <item
-        android:id="@+id/user_settings_menu_item"
+        android:id="@+id/user_info_menu_item"
         android:icon="@drawable/vector_drawable_user_settings"
         android:title="User Settings"
         app:showAsAction="always" />

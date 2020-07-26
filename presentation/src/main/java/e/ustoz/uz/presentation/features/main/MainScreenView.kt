@@ -1,8 +1,5 @@
-package uz.anotomica.app.presentation.presentation.features.main
+package e.ustoz.uz.presentation.features.main
 
 import moxy.MvpView
 
-interface MainScreenView : MvpView {
-
-
-}
+interface MainScreenView : MvpView

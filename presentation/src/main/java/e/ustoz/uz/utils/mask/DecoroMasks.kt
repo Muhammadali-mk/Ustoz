@@ -1,4 +1,4 @@
-package uz.anotomica.app.presentation.utils.mask
+package e.ustoz.uz.utils.mask
 
 import android.widget.TextView
 import ru.tinkoff.decoro.MaskImpl

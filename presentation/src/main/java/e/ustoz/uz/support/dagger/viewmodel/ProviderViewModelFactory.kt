@@ -1,4 +1,4 @@
-package uz.anotomica.app.presentation.support.dagger.viewmodel
+package e.ustoz.uz.support.dagger.viewmodel
 
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.ViewModelProvider

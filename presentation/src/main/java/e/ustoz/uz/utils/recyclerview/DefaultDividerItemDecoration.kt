@@ -1,11 +1,11 @@
-package uz.anotomica.app.presentation.utils.recyclerview
+package e.ustoz.uz.utils.recyclerview
 
 import android.annotation.SuppressLint
 import android.content.Context
 import android.graphics.Canvas
 import android.graphics.drawable.Drawable
 import androidx.recyclerview.widget.RecyclerView
-import uz.anotomica.app.presentation.R
+import e.ustoz.uz.R
 
 class DefaultDividerItemDecoration : RecyclerView.ItemDecoration() {
     @Volatile

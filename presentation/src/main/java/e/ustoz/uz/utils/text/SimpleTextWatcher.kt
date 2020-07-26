@@ -1,4 +1,4 @@
-package uz.anotomica.app.presentation.utils.text
+package e.ustoz.uz.utils.text
 
 import android.text.TextWatcher
 

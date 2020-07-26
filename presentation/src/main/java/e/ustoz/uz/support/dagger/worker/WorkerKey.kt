@@ -1,4 +1,4 @@
-package uz.anotomica.app.presentation.support.dagger.worker
+package e.ustoz.uz.support.dagger.worker
 
 import androidx.work.ListenableWorker
 import dagger.MapKey

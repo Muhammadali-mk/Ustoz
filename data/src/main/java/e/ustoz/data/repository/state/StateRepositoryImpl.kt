@@ -1,9 +1,9 @@
 package e.ustoz.data.repository.state
 
+import e.ustoz.data.datasource.preference.authorization.AuthorizationPreferenceSource
 import e.ustoz.data.datasource.preference.state.StatePreferenceSource
-import uz.anotomica.app.data.datasource.preference.authorization.AuthorizationPreferenceSource
 
-internal class StateRepositoryImpl(
+internal class StateRepositoryImpl (
     private val authorizationPreferenceSource: AuthorizationPreferenceSource,
     private val statePreferenceSource: StatePreferenceSource
 ) : StateRepository {

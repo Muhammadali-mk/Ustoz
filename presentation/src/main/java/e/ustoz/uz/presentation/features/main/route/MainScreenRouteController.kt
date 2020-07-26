@@ -1,29 +1,25 @@
-package uz.anotomica.app.presentation.presentation.features.main.route
+package e.ustoz.uz.presentation.features.main.route
 
 class MainScreenRouteController {
 
     private var eventListener: RouteEventListener? = null
-    private var currentRouteItem = MainScreenRouteItem.HOME_ITEM
+    private var currentRouteItem = MainScreenRouteItem.COURSE_ITEM
 
 
     fun setEventListener(eventListener: RouteEventListener?) {
         this.eventListener = eventListener
     }
 
-    fun navigateToAboutUsScreen() {
-        eventListener?.onStartNavigateToAboutUsScreen()
+    fun navigateToUserInfoScreen() {
+        eventListener?.onStartNavigateToUserInfo()
     }
 
-    fun navigateToAuthScreen() {
-        eventListener?.onStartNavigateToAuthScreen()
+    fun navigateToMaterials() {
+        eventListener?.onStartNavigateToMaterialsScreen()
     }
 
-    fun navigateToHeadingPostScreen(posts: String) {
-        eventListener?.onStartNavigateToHeadingPostScreen(posts)
-    }
-
-    fun navigateToPostDetailScreen(postId: String) {
-        eventListener?.onStartNavigateToPostDetailScreen(postId)
+    fun navigateToDaybookScreen() {
+        eventListener?.onStartNavigateToDaybookScreen()
     }
 
     fun navigateToSearchScreen() {
@@ -36,13 +32,11 @@ class MainScreenRouteController {
     }
 
     interface RouteEventListener {
-        fun onStartNavigateToAboutUsScreen()
+        fun onStartNavigateToUserInfo()
 
-        fun onStartNavigateToAuthScreen()
+        fun onStartNavigateToMaterialsScreen()
 
-        fun onStartNavigateToHeadingPostScreen(posts: String)
-
-        fun onStartNavigateToPostDetailScreen(postId: String)
+        fun onStartNavigateToDaybookScreen()
 
         fun onStartNavigateToSearchScreen()
 

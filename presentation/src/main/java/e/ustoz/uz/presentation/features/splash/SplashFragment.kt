@@ -6,11 +6,10 @@ import androidx.activity.addCallback
 import dagger.Lazy
 import e.ustoz.uz.R
 import e.ustoz.uz.databinding.FragmentSplashBinding
+import e.ustoz.uz.support.delegate.app.dialog.DialogDelegate
 import e.ustoz.uz.utils.app.onBackPressedDispatcher
 import moxy.MvpAppCompatFragment
 import moxy.ktx.moxyPresenter
-import uz.anotomica.app.presentation.presentation.features.splash.SplashView
-import uz.anotomica.app.presentation.support.delegate.app.dialog.DialogDelegate
 import javax.inject.Inject
 
 class SplashFragment @Inject constructor() : MvpAppCompatFragment(R.layout.fragment_splash),
@@ -42,7 +41,6 @@ class SplashFragment @Inject constructor() : MvpAppCompatFragment(R.layout.fragm
 
     override fun onLoading() {
         binding.apply {
-            splashProgressBar.visibility = View.VISIBLE
         }
     }
 

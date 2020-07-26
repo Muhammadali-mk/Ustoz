@@ -1,4 +1,4 @@
-package uz.anotomica.app.presentation.utils
+package e.ustoz.uz.utils
 
 import kotlinx.serialization.json.Json
 import kotlinx.serialization.json.JsonConfiguration

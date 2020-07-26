@@ -1,4 +1,4 @@
-package uz.anotomica.app.presentation.utils.recyclerview
+package e.ustoz.uz.utils.recyclerview
 
 import androidx.recyclerview.widget.RecyclerView
 

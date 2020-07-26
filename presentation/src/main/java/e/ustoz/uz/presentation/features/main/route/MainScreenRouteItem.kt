@@ -1,5 +1,5 @@
-package uz.anotomica.app.presentation.presentation.features.main.route
+package e.ustoz.uz.presentation.features.main.route
 
 enum class MainScreenRouteItem(val position: Int) {
-    HOME_ITEM(0), JOURNAL_ITEM(1),  PROFILE_ITEM(2)
+    COURSE_ITEM(0), MATERIAL_ITEM(1),  DAYBOOK_ITEM(2)
 }

@@ -9,8 +9,6 @@ import e.ustoz.uz.R
 import e.ustoz.uz.databinding.FragmentMainScreenBinding
 import moxy.MvpAppCompatFragment
 import moxy.ktx.moxyPresenter
-import uz.anotomica.app.presentation.presentation.features.main.MainScreenPresenter
-import uz.anotomica.app.presentation.presentation.features.main.MainScreenView
 import javax.inject.Inject
 import javax.inject.Provider
 
@@ -30,6 +28,10 @@ class MainScreenFragment @Inject constructor(
         requireActivity().window.clearFlags(WindowManager.LayoutParams.FLAG_LAYOUT_NO_LIMITS)
 
         val navController = Navigation.findNavController(requireActivity(), R.id.nav_host_fragment)
-        binding.bottomNavigationView.setupWithNavController(navController)
+        binding.bottomNavigationView.apply {
+
+            itemIconTintList=null
+            setupWithNavController(navController)
+        }
     }
 }

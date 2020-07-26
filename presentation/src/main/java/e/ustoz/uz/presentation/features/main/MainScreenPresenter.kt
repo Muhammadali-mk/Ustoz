@@ -1,11 +1,11 @@
-package uz.anotomica.app.presentation.presentation.features.main
+package e.ustoz.uz.presentation.features.main
 
+import e.ustoz.domain.interactor.main.MainScreenInteractor
 import e.ustoz.uz.global.navigation.GlobalNavController
+import e.ustoz.uz.presentation.features.main.route.MainScreenRouteController
+import e.ustoz.uz.presentation.features.main.route.MainScreenRouteItem
 import moxy.InjectViewState
 import moxy.MvpPresenter
-import uz.anotomica.app.domain.interactor.main.MainScreenInteractor
-import uz.anotomica.app.presentation.presentation.features.main.route.MainScreenRouteController
-import uz.anotomica.app.presentation.presentation.features.main.route.MainScreenRouteItem
 import javax.inject.Inject
 
 @InjectViewState
@@ -19,33 +19,21 @@ class MainScreenPresenter @Inject constructor(
 
         mainScreenRouteController.setEventListener(object :
             MainScreenRouteController.RouteEventListener {
-            override fun onStartNavigateToAboutUsScreen() {
 
+            override fun onStartNavigateToUserInfo() {
+                globalNavController.navigate(MainScreenFragmentDirections.actionToUserInfoScreen())
             }
 
-            override fun onStartNavigateToAuthScreen() {
-                globalNavController.navigate(
-                    MainScreenFragmentDirections.actionToAuthScreen()
-                )
+            override fun onStartNavigateToMaterialsScreen() {
             }
 
-            override fun onStartNavigateToHeadingPostScreen(posts: String) {
-                globalNavController
-                    .navigate(MainScreenFragmentDirections.actionToHeadingPostsScreen(posts))
-            }
-
-            override fun onStartNavigateToPostDetailScreen(post: String) {
-                globalNavController
-                    .navigate(MainScreenFragmentDirections.actionToPostDetailScreen(post))
+            override fun onStartNavigateToDaybookScreen() {
             }
 
             override fun onStartNavigateToSearchScreen() {
-                globalNavController
-                    .navigate(MainScreenFragmentDirections.actionToSearchScreen())
             }
 
             override fun onStartNavigateToTab(routeItem: MainScreenRouteItem) {
-
             }
         })
     }

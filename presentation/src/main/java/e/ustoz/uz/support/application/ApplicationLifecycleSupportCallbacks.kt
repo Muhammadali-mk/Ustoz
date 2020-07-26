@@ -6,7 +6,7 @@ import android.os.Bundle
 import androidx.fragment.app.Fragment
 import androidx.fragment.app.FragmentActivity
 import androidx.fragment.app.FragmentManager
-import uz.anotomica.app.presentation.utils.keyboard.SoftKeyboardCompat
+import e.ustoz.uz.utils.keyboard.SoftKeyboardCompat
 
 class ApplicationLifecycleSupportCallbacks(application: Application) {
 

@@ -7,9 +7,12 @@ import dagger.Provides
 import dagger.multibindings.IntoMap
 import e.ustoz.uz.global.di.GlobalScope
 import e.ustoz.uz.presentation.features.main.MainScreenFragment
-import e.ustoz.uz.presentation.features.main.features.home.HomeFragment
+import e.ustoz.uz.presentation.features.main.features.course.CoursesFragment
+import e.ustoz.uz.presentation.features.main.features.daybook.DaybookFragment
+import e.ustoz.uz.presentation.features.main.features.material.MaterialsFragment
+import e.ustoz.uz.presentation.features.main.features.test.TestsFragment
+import e.ustoz.uz.presentation.features.main.route.MainScreenRouteController
 import e.ustoz.uz.support.dagger.fragment.FragmentKey
-import uz.anotomica.app.presentation.presentation.features.main.route.MainScreenRouteController
 
 @Module(includes = [MainScreenDaggerModule.Binder::class])
 object MainScreenDaggerModule {
@@ -24,8 +27,23 @@ object MainScreenDaggerModule {
 
         @Binds
         @IntoMap
-        @FragmentKey(HomeFragment::class)
-        fun bindHomeFragment(fragment: HomeFragment): Fragment
+        @FragmentKey(CoursesFragment::class)
+        fun bindCoursesFragment(fragment: CoursesFragment): Fragment
+
+        @Binds
+        @IntoMap
+        @FragmentKey(MaterialsFragment::class)
+        fun bindMaterialsFragment(fragment: MaterialsFragment): Fragment
+
+        @Binds
+        @IntoMap
+        @FragmentKey(TestsFragment::class)
+        fun bindTestsFragment(fragment: TestsFragment): Fragment
+
+        @Binds
+        @IntoMap
+        @FragmentKey(DaybookFragment::class)
+        fun bindDaybookFragment(fragment: DaybookFragment): Fragment
 
         @Binds
         @IntoMap

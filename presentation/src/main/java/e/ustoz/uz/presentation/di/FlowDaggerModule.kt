@@ -8,6 +8,7 @@ import e.ustoz.uz.presentation.FlowFragment
 import e.ustoz.uz.presentation.features.login.LoginFragment
 import e.ustoz.uz.presentation.features.main.di.MainScreenDaggerModule
 import e.ustoz.uz.presentation.features.splash.SplashFragment
+import e.ustoz.uz.presentation.features.user_info.UserInfoFragment
 import e.ustoz.uz.support.dagger.fragment.FragmentKey
 
 @Module(includes = [FlowDaggerModule.Binder::class, MainScreenDaggerModule::class])
@@ -30,6 +31,11 @@ object FlowDaggerModule {
         @IntoMap
         @FragmentKey(SplashFragment::class)
         fun bindSplashFragment(fragment: SplashFragment): Fragment
+
+        @Binds
+        @IntoMap
+        @FragmentKey(UserInfoFragment::class)
+        fun bindUserInfoFragment(fragment: UserInfoFragment): Fragment
 
     }
 }

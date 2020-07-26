@@ -67,11 +67,9 @@ class FlowFragment @Inject constructor(
     override fun onInitializeNavController(isLoginHasBeen: Boolean) {
         navController.let {
             it.navInflater.inflate(R.navigation.navigation_global).apply {
-//                startDestination =
-//                    if (isLoginHasBeen) R.id.navigation_global_main_fragment
-////                    else R.id.navigation_global_main_fragment
-//                    else R.id.navigation_global_login_fragment
-//                it.graph = this
+                startDestination =
+                    R.id.navigation_global_main_fragment
+                it.graph = this
             }
         }
     }

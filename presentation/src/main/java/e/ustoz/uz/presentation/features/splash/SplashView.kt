@@ -1,4 +1,4 @@
-package uz.anotomica.app.presentation.presentation.features.splash
+package e.ustoz.uz.presentation.features.splash
 
 import moxy.MvpView
 

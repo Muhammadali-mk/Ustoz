@@ -1,0 +1,9 @@
+<resources>
+
+    <style name="Presentation.Widget.Divider" parent="android:style/Widget">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">0.5dp</item>
+        <item name="android:background">#6B7E7E7E</item>
+    </style>
+
+</resources>

@@ -1,4 +1,4 @@
-package uz.anotomica.app.presentation.support.delegate.app.dialog
+package e.ustoz.uz.support.delegate.app.dialog
 
 import android.content.Context
 import androidx.annotation.CallSuper

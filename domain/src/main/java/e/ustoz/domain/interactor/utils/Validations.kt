@@ -1,4 +1,4 @@
-package uz.anotomica.app.domain.interactor.utils
+package e.ustoz.domain.interactor.utils
 
 import java.util.regex.Pattern
 

@@ -1,4 +1,4 @@
-package e.ustoz.uz.presentation.features.main.features.courses.statelayout
+package e.ustoz.uz.presentation.features.main.features.common
 
 import android.R.attr
 import android.annotation.SuppressLint
@@ -198,7 +198,8 @@ class StateLayout @JvmOverloads constructor(
         get() = errorLinearLayout.visibility == View.VISIBLE
 
     fun setOnErrorButtonClickListener(onClick: () -> Unit) {
-        errorButtonClickListener = object : OnErrorButtonClickListener {
+        errorButtonClickListener = object :
+            OnErrorButtonClickListener {
             override fun onErrorButtonClick(stateLayout: StateLayout) = onClick.invoke()
         }
     }

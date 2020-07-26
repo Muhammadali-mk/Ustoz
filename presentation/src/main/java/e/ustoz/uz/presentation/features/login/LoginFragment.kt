@@ -4,11 +4,10 @@ import android.os.Bundle
 import android.view.View
 import e.ustoz.uz.R
 import e.ustoz.uz.databinding.FragmentLoginBinding
+import e.ustoz.uz.support.delegate.app.dialog.error.ErrorDialogDelegate
+import e.ustoz.uz.support.delegate.app.dialog.loading.LoadingDialogDelegate
 import moxy.MvpAppCompatFragment
 import moxy.ktx.moxyPresenter
-import uz.anotomica.app.presentation.presentation.features.login.AuthenticateView
-import uz.anotomica.app.presentation.support.delegate.app.dialog.error.ErrorDialogDelegate
-import uz.anotomica.app.presentation.support.delegate.app.dialog.loading.LoadingDialogDelegate
 import javax.inject.Inject
 import javax.inject.Provider
 

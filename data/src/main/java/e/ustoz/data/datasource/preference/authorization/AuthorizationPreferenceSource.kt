@@ -1,4 +1,4 @@
-package uz.anotomica.app.data.datasource.preference.authorization
+package e.ustoz.data.datasource.preference.authorization
 
 import e.ustoz.data.manager.preference.PreferenceManager
 import kotlinx.coroutines.flow.Flow

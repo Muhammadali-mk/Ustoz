@@ -1,4 +1,4 @@
-package uz.anotomica.app.presentation.support.delegate.view.recyclerview.state.states
+package e.ustoz.uz.support.delegate.view.recyclerview.state.states
 
 import android.view.LayoutInflater
 import android.view.ViewGroup

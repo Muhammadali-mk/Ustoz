@@ -7,5 +7,11 @@
     <string name="core_presentation_common_error">Error</string>
     <string name="core_presentation_common_error_connection_message">There was an error in connecting to server. Please, try again.</string>
     <string name="core_presentation_common_error_unknown_message">There was an unknown error. Please, try again later.</string>
+    <string name="delegate_error_dialog_title">Ogohlantirish</string>
+    <string name="title_app_version">Versiya: %1$s</string>
+    <string name="delegate_error_dialog_message_type">Tip: %1$s</string>
+    <string name="delegate_error_dialog_unknown_message">Xatolik yuz berdi. Iltimos keyinroq qayta urinib ko`ring</string>
+    <string name="delegate_error_dialog_message">Xatolik yuz berdi. Iltimos keyinroq qayta urinib ko`ring.</string>
+    <string name="layout_loading_dialog_message">Iltimos kuting…</string>
 
 </resources>

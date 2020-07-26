@@ -2,6 +2,7 @@ package e.ustoz.data.datasource.rest.authenticator
 
 import android.util.Log
 import e.ustoz.data.BuildConfig
+import e.ustoz.data.datasource.preference.authorization.AuthorizationPreferenceSource
 import e.ustoz.data.datasource.rest.constants.ConstantsApiKey
 import e.ustoz.data.datasource.rest.service.holder.RestServicesHolder
 import okhttp3.Authenticator
@@ -10,7 +11,6 @@ import okhttp3.Response
 import okhttp3.Route
 import okhttp3.internal.platform.Platform
 import okhttp3.internal.platform.Platform.WARN
-import uz.anotomica.app.data.datasource.preference.authorization.AuthorizationPreferenceSource
 
 internal class Authenticator(
     private val restServicesHolder: RestServicesHolder,

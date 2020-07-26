@@ -2,6 +2,7 @@ package e.ustoz.data.provider.repository.datasource
 
 import com.jakewharton.retrofit2.converter.kotlinx.serialization.asConverterFactory
 import e.ustoz.data.BuildConfig
+import e.ustoz.data.datasource.preference.authorization.AuthorizationPreferenceSource
 import e.ustoz.data.datasource.rest.authenticator.Authenticator
 import e.ustoz.data.datasource.rest.constants.ConstantsApiPath
 import e.ustoz.data.datasource.rest.error.ErrorResponseHandler
@@ -16,7 +17,6 @@ import kotlinx.serialization.json.Json
 import okhttp3.*
 import okhttp3.logging.HttpLoggingInterceptor
 import retrofit2.Retrofit
-import uz.anotomica.app.data.datasource.preference.authorization.AuthorizationPreferenceSource
 import java.security.SecureRandom
 import java.security.cert.X509Certificate
 import java.util.*

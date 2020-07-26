@@ -1,4 +1,4 @@
-package uz.anotomica.app.presentation.presentation.features.login
+package e.ustoz.uz.presentation.features.login
 
 import moxy.MvpView
 

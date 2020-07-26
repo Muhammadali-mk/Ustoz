@@ -1,5 +1,30 @@
 <?xml version="1.0" encoding="utf-8"?>
 <navigation xmlns:android="http://schemas.android.com/apk/res/android"
-    android:id="@+id/navigation_main_screen">
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/navigation_main_screen"
+    app:startDestination="@id/navigation_user_courses_fragment">
+
+    <fragment
+        android:id="@+id/navigation_user_courses_fragment"
+        android:name="e.ustoz.uz.presentation.features.main.features.course.CoursesFragment"
+        android:label="CoursesFragment"
+        tools:layout="@layout/fragment_feature_user_courses" />
+
+    <fragment
+        android:id="@+id/navigation_user_materials_fragment"
+        android:name="e.ustoz.uz.presentation.features.main.features.material.MaterialsFragment"
+        android:label="MaterialsFragment"
+        tools:layout="@layout/fragment_feature_user_materials" />
+    <fragment
+        android:id="@+id/navigation_user_tests_fragment"
+        android:name="e.ustoz.uz.presentation.features.main.features.test.TestsFragment"
+        android:label="TestsFragment"
+        tools:layout="@layout/fragment_feature_tests" />
+    <fragment
+        android:id="@+id/navigation_user_daybook_fragment"
+        android:name="e.ustoz.uz.presentation.features.main.features.daybook.DaybookFragment"
+        android:label="DaybookFragment"
+        tools:layout="@layout/fragment_feature_user_daybook" />
 
 </navigation>

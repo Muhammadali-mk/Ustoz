@@ -1,14 +1,14 @@
-package uz.anotomica.app.presentation.support.delegate.app.dialog.error
+package e.ustoz.uz.support.delegate.app.dialog.error
 
 import android.content.Context
 import android.view.LayoutInflater
 import androidx.appcompat.app.AlertDialog
 import androidx.fragment.app.Fragment
 import androidx.lifecycle.LifecycleOwner
-import uz.anotomica.app.presentation.BuildConfig
-import uz.anotomica.app.presentation.R
-import uz.anotomica.app.presentation.databinding.ViewErrorDialogDelegateBinding
-import uz.anotomica.app.presentation.support.delegate.app.dialog.DialogDelegate
+import e.ustoz.uz.BuildConfig
+import e.ustoz.uz.R
+import e.ustoz.uz.databinding.ViewErrorDialogDelegateBinding
+import e.ustoz.uz.support.delegate.app.dialog.DialogDelegate
 
 class ErrorDialogDelegate(
     context: Context, lifecycleOwner: LifecycleOwner?

@@ -1,10 +1,11 @@
-package uz.anotomica.app.presentation.application
+package e.ustoz.uz.application
 
 import android.app.Application
 import android.content.Context
 import android.util.Log
 import com.facebook.drawee.backends.pipeline.Fresco
 import e.ustoz.uz.application.di.ApplicationDaggerComponent
+import e.ustoz.uz.support.application.ApplicationLifecycleSupportCallbacks
 import me.vponomarenko.injectionmanager.IHasComponent
 import me.vponomarenko.injectionmanager.x.XInjectionManager
 import kotlin.properties.Delegates
@@ -37,7 +38,7 @@ class Application : Application(),
     }
 
     init {
-        Log.wtf("anotomica_data", "application created")
+        Log.wtf("uztoz_data", "application created")
     }
 
     override fun onCreate() {

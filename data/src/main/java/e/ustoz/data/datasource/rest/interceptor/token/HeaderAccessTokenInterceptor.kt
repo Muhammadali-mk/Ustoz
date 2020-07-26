@@ -1,5 +1,6 @@
 package e.ustoz.data.datasource.rest.interceptor.token
 
+import e.ustoz.data.datasource.preference.authorization.AuthorizationPreferenceSource
 import e.ustoz.data.datasource.rest.constants.ConstantsApiKey
 import e.ustoz.data.datasource.rest.constants.ConstantsApiPath
 import okhttp3.HttpUrl
@@ -7,7 +8,6 @@ import okhttp3.Interceptor
 import okhttp3.Interceptor.Chain
 import okhttp3.Request
 import okhttp3.Response
-import uz.anotomica.app.data.datasource.preference.authorization.AuthorizationPreferenceSource
 
 internal class HeaderAccessTokenInterceptor(
     private val authorizationPreferenceSource: AuthorizationPreferenceSource

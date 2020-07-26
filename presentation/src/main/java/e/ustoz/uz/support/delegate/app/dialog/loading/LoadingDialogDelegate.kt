@@ -1,12 +1,12 @@
-package uz.anotomica.app.presentation.support.delegate.app.dialog.loading
+package e.ustoz.uz.support.delegate.app.dialog.loading
 
 import android.content.Context
 import androidx.appcompat.app.AlertDialog
 import androidx.appcompat.app.AppCompatActivity
 import androidx.fragment.app.Fragment
 import androidx.lifecycle.LifecycleOwner
-import uz.anotomica.app.presentation.R
-import uz.anotomica.app.presentation.support.delegate.app.dialog.DialogDelegate
+import e.ustoz.uz.R
+import e.ustoz.uz.support.delegate.app.dialog.DialogDelegate
 
 class LoadingDialogDelegate(
     context: Context, lifecycleOwner: LifecycleOwner?

@@ -1,26 +1,32 @@
-<menu xmlns:android="http://schemas.android.com/apk/res/android">
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
     <item
-        android:id="@+id/navigation_home_author_info"
+        android:id="@+id/navigation_user_courses_fragment"
         android:orderInCategory="100"
-        android:icon="@drawable/vector_drawable_author_info"
-        android:title="@string/title_author_info" />
+        android:icon="@drawable/vector_drawable_course"
+        android:title=""
+        app:labelVisibilityMode="unlabeled"
+        />
     <item
-        android:id="@+id/navigation_home_folder"
+        android:id="@+id/navigation_user_materials_fragment"
         android:orderInCategory="103"
         android:actionLayout="@layout/menu_divider_linear_layout"
         android:icon="@drawable/vector_drawable_folder"
-        android:title="@string/title_folder"
+        android:title=""
+        app:labelVisibilityMode="unlabeled"
         />
     <item
-        android:id="@+id/navigation_home_tests"
+        android:id="@+id/navigation_user_tests_fragment"
         android:orderInCategory="104"
         android:icon="@drawable/vector_drawable_tests"
-        android:title="@string/title_tests"
+        android:title=""
+        app:labelVisibilityMode="unlabeled"
         />
     <item
-        android:id="@+id/navigation_home_profile_fragment"
+        android:id="@+id/navigation_user_daybook_fragment"
         android:icon="@drawable/vector_drawable_daybook"
         android:orderInCategory="104"
-        android:title="@string/title_daybook"
+        android:title=""
+        app:labelVisibilityMode="unlabeled"
         />
 </menu>

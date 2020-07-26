@@ -10,7 +10,6 @@ import kotlinx.coroutines.launch
 import moxy.InjectViewState
 import moxy.MvpPresenter
 import moxy.presenterScope
-import uz.anotomica.app.presentation.presentation.features.splash.SplashView
 import javax.inject.Inject
 
 @InjectViewState
@@ -33,7 +32,7 @@ class SplashPresenter @Inject constructor(
         }
     }
 
-    fun navigateToNextScreen() {
+    private fun navigateToNextScreen() {
        // globalNavController.navigate(SplashFragmentDirections.actionToMainScreen())
     }
 }

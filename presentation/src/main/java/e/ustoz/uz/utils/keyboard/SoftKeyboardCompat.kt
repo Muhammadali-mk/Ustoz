@@ -1,4 +1,4 @@
-package uz.anotomica.app.presentation.utils.keyboard
+package e.ustoz.uz.utils.keyboard
 
 import android.app.Activity
 import android.content.Context

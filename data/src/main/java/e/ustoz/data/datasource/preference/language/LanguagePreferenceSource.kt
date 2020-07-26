@@ -1,9 +1,9 @@
 package e.ustoz.data.datasource.preference.language
 
 import e.ustoz.data.manager.preference.PreferenceManager
+import e.ustoz.data.model.language.Language
 import kotlinx.coroutines.flow.Flow
 import kotlinx.coroutines.flow.flowOf
-import uz.anotomica.app.data.model.language.Language
 
 class LanguagePreferenceSource internal constructor(
     private val preferenceManager: PreferenceManager
