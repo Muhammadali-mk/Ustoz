@@ -1,9 +1,9 @@
 package e.ustoz.data.datasource.rest.constants
 
 internal object ConstantsApiPath {
-    const val API_BASE_URL: String = ""
+    const val API_BASE_URL: String = "https://e-ustoz.uz/servers/"
 
-    const val API_AUTHENTICATE: String = "token/"
+    const val API_AUTH: String = "auth"
 
     const val API_LOGIN: String = "auth/login"
 

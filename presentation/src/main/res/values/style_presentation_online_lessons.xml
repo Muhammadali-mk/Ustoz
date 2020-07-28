@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <style name="Presentation.Widget.SimpleDraweeView.ProductDetailImage" >
+        <item name="actualImageScaleType">centerCrop</item>
+        <item name="fadeDuration">300</item>
+        <item name="failureImage">@drawable/vector_drawable_author_info</item>
+        <item name="failureImageScaleType">centerInside</item>
+        <item name="placeholderImageScaleType">centerInside</item>
+        <item name="progressBarAutoRotateInterval">1000</item>
+        <item name="progressBarImage">@drawable/loading_default_medium</item>
+        <item name="progressBarImageScaleType">center</item>
+    </style>
+</resources>

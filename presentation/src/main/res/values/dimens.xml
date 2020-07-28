@@ -3,5 +3,7 @@
     <dimen name="space_start">56dp</dimen>
     <dimen name="divider">1dp</dimen>
     <dimen name="design_bottom_navigation_height" tools:override="true">60dp</dimen>
+    <dimen name="space_6">6dp</dimen>
+    <dimen name="space_16">16dp</dimen>
 
 </resources>

@@ -9,6 +9,7 @@ import e.ustoz.data.provider.DataProvider
 import e.ustoz.data.provider.manager.DataManagerProvider
 import e.ustoz.data.provider.repository.DataRepositoryProvider
 import e.ustoz.data.provider.repository.datasource.DataPreferenceSourceProvider
+import e.ustoz.data.repository.course.CourseRepository
 import e.ustoz.data.repository.state.StateRepository
 import e.ustoz.uz.application.di.ApplicationDaggerModule.Provider
 import e.ustoz.uz.application.di.ApplicationDaggerModule.ProviderPreferenceSource
@@ -87,5 +88,12 @@ object ApplicationDaggerModule {
         fun provideStateRepository(
             dataRepositoryProvider: DataRepositoryProvider
         ): StateRepository = dataRepositoryProvider.stateRepository
+
+        @JvmStatic
+        @Provides
+        @Singleton
+        fun provideCourseRepository(
+            dataRepositoryProvider: DataRepositoryProvider
+        ): CourseRepository = dataRepositoryProvider.courseRepository
     }
 }

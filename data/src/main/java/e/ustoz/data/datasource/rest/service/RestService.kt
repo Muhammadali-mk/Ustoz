@@ -7,6 +7,6 @@ import retrofit2.http.POST
 internal interface RestService {
 
     // Authenticate
-    @POST(ConstantsApiPath.API_AUTHENTICATE)
+    @POST(ConstantsApiPath.API_AUTH)
     fun authenticate(): Call<Any>
 }

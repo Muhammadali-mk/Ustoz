@@ -4,6 +4,8 @@ import android.content.Context
 import e.ustoz.data.provider.repository.datasource.DataDatabaseProvider
 import e.ustoz.data.provider.repository.datasource.DataPreferenceSourceProvider
 import e.ustoz.data.provider.repository.datasource.DataPreferenceSourceProviderImpl
+import e.ustoz.data.repository.course.CourseRepository
+import e.ustoz.data.repository.course.CourseRepositoryImpl
 import e.ustoz.data.repository.state.StateRepository
 import e.ustoz.data.repository.state.StateRepositoryImpl
 
@@ -23,4 +25,5 @@ internal class DataRepositoryProviderImpl(context: Context) : DataRepositoryProv
         authorizationPreferenceSource = dataPreferenceSourceProvider.authorizationPreferenceSource,
         statePreferenceSource = dataPreferenceSourceProvider.statePreferenceSource
     )
+    override val courseRepository: CourseRepository=CourseRepositoryImpl()
 }

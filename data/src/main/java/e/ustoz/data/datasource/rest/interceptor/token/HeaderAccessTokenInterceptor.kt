@@ -21,7 +21,7 @@ internal class HeaderAccessTokenInterceptor(
             .apply {
                 val httpUrl: HttpUrl = it.url()
                 if (!it.url().encodedPath().contains(
-                        ConstantsApiPath.API_AUTHENTICATE,
+                        ConstantsApiPath.API_AUTH,
                         ignoreCase = true
                     )
                 )
