@@ -2,9 +2,13 @@
 <com.google.android.material.card.MaterialCardView xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
-    android:layout_width="180dp"
+    android:layout_width="@dimen/_92sdp"
     android:layout_height="wrap_content"
+    app:cardCornerRadius="@dimen/_9sdp"
+    app:strokeColor="#AEB0B3"
+    app:strokeWidth="@dimen/_1sdp"
     app:cardElevation="8dp"
+
     app:cardUseCompatPadding="false">
 
     <androidx.constraintlayout.widget.ConstraintLayout
@@ -17,7 +21,7 @@
             android:id="@+id/lesson_image_simple_drawee_view"
             style="@style/Presentation.Widget.SimpleDraweeView.ProductDetailImage"
             android:layout_width="0dp"
-            android:layout_height="@dimen/_140sdp"
+            android:layout_height="@dimen/_90sdp"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent" />
@@ -25,19 +29,19 @@
         <TextView
             android:id="@+id/lesson_name_text_view"
             android:layout_width="0dp"
-            android:layout_height="wrap_content"
+            android:layout_height="@dimen/_36sdp"
             android:layout_marginTop="12dp"
             android:ellipsize="end"
             android:maxLines="3"
             android:textSize="14sp"
             android:gravity="center"
-            android:paddingHorizontal="8dp"
-            android:paddingBottom="8dp"
+            android:paddingHorizontal="@dimen/_4sdp"
+            android:paddingBottom="@dimen/_4sdp"
             android:textColor="#111111"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/lesson_image_simple_drawee_view"
-            tools:text="MedTravel" />
+            tools:text="Mathematics Hekkkd" />
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 </com.google.android.material.card.MaterialCardView>
