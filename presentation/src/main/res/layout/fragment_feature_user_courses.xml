@@ -2,7 +2,8 @@
 <androidx.coordinatorlayout.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
-    android:layout_height="match_parent">
+    android:layout_height="match_parent"
+    android:background="#C7C9CB">
 
     <com.google.android.material.appbar.AppBarLayout
         android:layout_width="match_parent"
@@ -13,8 +14,24 @@
             android:id="@+id/toolbar"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            app:navigationIcon="@drawable/ic_vector_drawable_toolbar_ustoz"
-            app:popupTheme="@style/Presentation.Theme.PopupOverlay" />
+            app:contentInsetStart="0dp"
+            app:popupTheme="@style/Presentation.Theme.PopupOverlay" >
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <androidx.appcompat.widget.AppCompatImageView
+                    android:layout_width="wrap_content"
+                    android:layout_marginStart="-5dp"
+                    android:layout_height="match_parent"
+                    app:srcCompat="@drawable/ic_vector_drawable_toolbar_ustoz" />
+                <androidx.appcompat.widget.AppCompatImageView
+                    android:layout_width="match_parent"
+                    android:layout_alignParentBottom="true"
+                    android:layout_height="@dimen/_5sdp"
+                    app:srcCompat="@drawable/view_toolbar_divider_dash_line" />
+            </RelativeLayout>
+        </androidx.appcompat.widget.Toolbar>
 
     </com.google.android.material.appbar.AppBarLayout>
 
@@ -24,37 +41,95 @@
         android:orientation="vertical"
         app:layout_behavior="@string/appbar_scrolling_view_behavior">
 
-        <RelativeLayout
+        <androidx.constraintlayout.widget.ConstraintLayout
             android:layout_width="match_parent"
             android:layout_height="match_parent">
 
-            <androidx.appcompat.widget.AppCompatTextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_centerInParent="true"
-                android:layout_gravity="center"
-                android:text="Courses"
-                android:textSize="@dimen/_30sdp"
-                android:textStyle="bold" />
-
             <androidx.recyclerview.widget.RecyclerView
+
                 android:id="@+id/online_lessons_recycler_view_horizontal"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_alignParentTop="true"
                 android:layout_marginVertical="@dimen/_10sdp"
                 android:overScrollMode="never"
                 android:scrollbars="none"
-                />
+                app:layout_constraintBottom_toTopOf="@id/guideline"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
 
-            <androidx.recyclerview.widget.RecyclerView
-                android:id="@+id/recycler_view"
-                style="@style/Presentation.Widget.RecyclerView"
+            <androidx.constraintlayout.widget.Guideline
+                android:id="@+id/guideline"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                app:layout_constraintGuide_percent="0.35" />
+
+            <com.google.android.material.card.MaterialCardView
+                android:id="@+id/card_view"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_alignParentBottom="true" />
+                android:layout_centerInParent="true"
+                android:layout_marginHorizontal="@dimen/_10sdp"
+                android:layout_marginVertical="@dimen/_6sdp"
+                android:elevation="@dimen/_4sdp"
+                app:cardBackgroundColor="@color/white"
+                app:cardCornerRadius="@dimen/_9sdp"
+                app:layout_behavior="@string/appbar_scrolling_view_behavior"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/guideline"
+                app:strokeColor="#96999C"
+                app:strokeWidth="@dimen/_1sdp">
 
-        </RelativeLayout>
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <FrameLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginVertical="@dimen/_4sdp">
+
+                        <androidx.appcompat.widget.AppCompatImageView
+                            android:layout_width="match_parent"
+                            android:layout_height="@dimen/_24sdp"
+                            android:layout_gravity="center_vertical"
+                            android:layout_marginStart="@dimen/_10sdp"
+                            app:srcCompat="@drawable/view_holder_toolbar_title_background_view" />
+
+                        <androidx.appcompat.widget.AppCompatTextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="@dimen/_10sdp"
+                            android:background="@drawable/vector_drawable_toolbar_title_background"
+                            android:fontFamily="@font/arial_bold"
+                            android:paddingHorizontal="@dimen/_3sdp"
+                            android:text="My Courses"
+                            android:textColor="@color/white"
+                            android:textSize="@dimen/_14sdp" />
+
+                    </FrameLayout>
+
+                    <androidx.core.widget.NestedScrollView
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:fillViewport="true"
+                        >
+
+                        <androidx.recyclerview.widget.RecyclerView
+                            android:id="@+id/recycler_view_user_course_list"
+                            style="@style/Presentation.Widget.RecyclerView"
+                            android:layout_width="match_parent"
+                            android:nestedScrollingEnabled="false"
+                            android:scrollbars="vertical"
+                            android:layout_height="match_parent" />
+                    </androidx.core.widget.NestedScrollView>
+
+                </LinearLayout>
+            </com.google.android.material.card.MaterialCardView>
+        </androidx.constraintlayout.widget.ConstraintLayout>
 
     </e.ustoz.uz.presentation.features.main.features.common.StateLayout>
 </androidx.coordinatorlayout.widget.CoordinatorLayout>

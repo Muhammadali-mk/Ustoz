@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+
+    <androidx.appcompat.widget.AppCompatImageView
+        android:id="@+id/divider_top"
+        android:layout_width="match_parent"
+        android:layout_height="5dp"
+        android:layout_marginVertical="@dimen/_2sdp"
+        android:layout_marginHorizontal="@dimen/_12sdp"
+        android:layerType="software"
+        android:visibility="gone"
+        app:srcCompat="@drawable/view_divider_dash_line" />
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="@dimen/_6sdp"
+        android:orientation="horizontal">
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/user_course_icon_image_view"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_gravity="center_vertical"
+            android:padding="@dimen/_10sdp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintDimensionRatio="1:1"
+            app:layout_constraintEnd_toStartOf="@+id/user_course_author_name_text_view"
+            app:layout_constraintHorizontal_weight="2"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:srcCompat="@drawable/ic_user_cource_for_test_one" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/user_course_name_text_view"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:ellipsize="end"
+            android:fontFamily="@font/arial_bold"
+            android:maxLines="2"
+            android:text="Обучение чтениюза 15 уроков"
+            android:textColor="#1A1818"
+            android:textSize="18sp"
+            app:layout_constraintBottom_toTopOf="@+id/user_course_author_name_text_view"
+            app:layout_constraintEnd_toStartOf="@+id/user_courrse_count_text_view"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintHorizontal_weight="6"
+            app:layout_constraintStart_toEndOf="@+id/user_course_icon_image_view"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/user_course_author_name_text_view"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:ellipsize="end"
+            android:fontFamily="@font/arial_italic"
+            android:maxLines="1"
+            android:text="Мадаминов Фарход Абдуллаевич"
+            android:textColor="#1A1818"
+            android:textSize="13sp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toStartOf="@id/user_courrse_count_text_view"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintHorizontal_weight="4"
+            app:layout_constraintStart_toEndOf="@id/user_course_icon_image_view"
+            app:layout_constraintTop_toBottomOf="@+id/user_course_name_text_view" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/user_courrse_count_text_view"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/arial_bold"
+            android:text="1/15"
+            android:textColor="@color/colorPrimary"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_weight="1"
+            app:layout_constraintStart_toEndOf="@+id/user_course_name_text_view"
+            app:layout_constraintTop_toTopOf="@+id/user_course_name_text_view" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <androidx.appcompat.widget.AppCompatImageView
+        android:layout_width="match_parent"
+        android:layout_height="5dp"
+        android:layout_marginVertical="@dimen/_2sdp"
+        android:layout_marginHorizontal="@dimen/_12sdp"
+        app:srcCompat="@drawable/view_divider_dash_line" />
+</LinearLayout>

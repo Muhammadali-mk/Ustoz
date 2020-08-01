@@ -14,18 +14,29 @@ class CoursesPresenter @Inject constructor(
 ) : MvpPresenter<CoursesView>() {
     override fun onFirstViewAttach() {
         getCourceData()
+        getUserCourseById()
     }
     fun navigateToUserInfo() {
         mainScreenRouteController.navigateToUserInfoScreen()
     }
 
-    fun getCourceData() {
+    private fun getCourceData() {
         presenterScope.launch {
             courseInteractor.getOnlineCources()
                 .collect(
-                    onStart = {},
+                    onStart = {viewState.onLoading()},
                     onSuccess = {viewState.onSuccess(it)},
-                    onFailure = {}
+                    onFailure = {viewState.onFailure(it)}
+                )
+        }
+    }
+    private fun getUserCourseById() {
+        presenterScope.launch {
+            courseInteractor.getUserCourses()
+                .collect(
+                    onStart = {viewState.onLoading()},
+                    onSuccess = {viewState.onSuccessUserCources(it)},
+                    onFailure = {viewState.onFailure(it)}
                 )
         }
     }

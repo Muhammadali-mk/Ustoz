@@ -16,7 +16,7 @@ import e.ustoz.uz.view.recyclerview.ViewHolderItemBinder
 import e.ustoz.uz.databinding.ViewHolderOnlineCourseBinding as ViewBinding
 
 
-class OnlineLessonsListRecyclerViewDelegate(
+internal class OnlineLessonsListRecyclerViewDelegate(
     target: LifecycleOwner?,
     private val listener: (OnlineLessonResponse) -> Unit
 ) : RecyclerViewStateDelegate<OnlineLessonResponse>(target) {

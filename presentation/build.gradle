@@ -84,6 +84,8 @@ dependencies {
     kapt "com.google.dagger:dagger-compiler:$versions.google.dagger"
 
     implementation "com.google.zxing:core:3.4.0"
+    implementation 'com.kirich1409.viewbindingpropertydelegate:viewbindingpropertydelegate:1.0.0'
+
     implementation "com.google.zxing:android-core:3.3.0"
 
     implementation "com.github.moxy-community:moxy:$versions.moxy_community.moxy"

@@ -10,6 +10,7 @@
         android:title="Search"
         app:showAsAction="always" />
 
+
     <item
         android:id="@+id/user_info_menu_item"
         android:icon="@drawable/vector_drawable_user_settings"
